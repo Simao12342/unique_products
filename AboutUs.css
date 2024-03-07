@@ -1,0 +1,95 @@
+* {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+
+    font-style: normal;
+}
+.navbar-nav {
+    font-size: 25px;
+
+}
+/*стилі заголовку*/
+.header-container {
+    border-bottom: 3px solid rgb(44, 44, 44);
+    box-shadow: 0px 0px 5px 0px rgb(239, 180, 180) !important;
+    background-color: #343a40;
+    /* Синій колір фону */
+    color: #fafafa;
+    /* Білий колір тексту */
+}
+body {
+background-color: #aeb1b41d !important;
+
+}
+.navbar-brand,
+.nav-link {
+    color: #ffffff !important;
+    /* Білий колір тексту для лінків */
+}
+
+.nav-link {
+    margin-right: 15px;
+    /* Відступи між елементами меню */
+}
+
+/* Стиль для активного посилання */
+.nav-link.active,
+.nav-link:hover {
+    color: #ffc107 !important;
+    /* Колір посилань при наведенні або активному стані */
+}
+
+.header-container {
+    padding: 0;
+}
+
+.navbar-brand {
+    width: 20%;
+    height: 100%;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+h5 {
+    text-align: center;
+}
+.container-about-us {
+background-color: #aeb1b41d !important;
+
+
+}
+.row {
+    margin-right: 0 !important;
+}
+
+.logo-img2 {
+
+    margin: 0;
+    width: 100%;
+    height: 25%;
+    object-fit: cover;
+}
+.logo2-aboutUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 10%;
+}
+.container-about-us a,h2,p{
+    padding-left: 15px;
+}
+.container-about-us h2,h3 {
+    text-align: center;
+}
+.cover-info {
+    margin-left: 25px;
+    margin-top: 15px;
+    border: 3px solid rgb(134, 134, 133);
+    border-radius: 15px;
+    box-shadow: 3px 3px 6px 3px gray;
+}

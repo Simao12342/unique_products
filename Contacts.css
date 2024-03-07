@@ -1,0 +1,100 @@
+* {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+body {
+background-color: #aeb1b41d !important;    
+}
+.navbar-nav {
+    font-size: 25px;
+
+}
+/* стилі для каруселі фото */
+.carousel-container {
+    display: flex;
+    /* використовується flexbox для центрування */
+    justify-content: center;
+    /* центрування по горизонталі */
+    align-items: center;
+    /* центрування по вертикалі */
+    height: 400px;
+    /* висота контейнера - 100% від висоти вікна перегляду */
+}
+
+/* Стилі для самого слайдера */
+#myCarousel {
+    width: 100% !important;
+    /* ширина слайдера - 80% від ширини контейнера */
+    height: 100% !important;
+    /* висота слайдера - 30% від висоти вікна перегляду */
+
+
+}
+
+/* Стилі для зображень у слайдері */
+.carousel-inner img {
+
+    width: 100%;
+    /* ширина зображення - 100% від ширини слайдера */
+    height: 400px;
+    /* висота зображення - 100% від висоти слайдера */
+    overflow: hidden;
+    object-fit: cover;
+    /* забезпечує, щоб зображення покривали слайд, не втрачаючи пропорції */
+}
+
+/* кінець стилей каруселі */
+/*стилі заголовку*/
+.header-container {
+    border-bottom: 3px solid rgb(44, 44, 44);
+    box-shadow: 0px 0px 5px 0px rgb(239, 180, 180);
+    background-color: #343a40;
+    /* Синій колір фону */
+    color: #fafafa;
+    /* Білий колір тексту */
+}
+
+.navbar-brand,
+.nav-link {
+    color: #ffffff !important;
+    /* Білий колір тексту для лінків */
+}
+
+.nav-link {
+    margin-right: 15px;
+    /* Відступи між елементами меню */
+}
+
+/* Стиль для активного посилання */
+.nav-link.active,
+.nav-link:hover {
+    color: #ffc107 !important;
+    /* Колір посилань при наведенні або активному стані */
+}
+
+.header-container {
+    padding: 0;
+}
+
+.navbar-brand {
+    width: 20%;
+    height: 100%;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+h5 {
+    text-align: center;
+}
+
+.container-about-us {
+    background-color: #343a40;
+    color: white;
+
+}
+
