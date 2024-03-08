@@ -305,62 +305,46 @@ footer {
   border-top: 3px solid rgb(150, 147, 147);
 }
 /* фльтр фотопосилання */
-.image-link-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1200px;
-  /* Максимальна ширина контейнера */
-}
-
-.image-link {
-  position: relative;
-  width: calc(20% - 20px);
-  /* Віднімаємо маржини, щоб утримати 3 елементи в рядку */
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  /* Закруглені краї */
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.image-link img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.image-link .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 140, 186, 0.85);
-  /* Напівпрозорий синій колір */
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .5s ease;
-}
-
-.image-link:hover .overlay {
-  height: 100%;
-}
-
-.image-link .text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.filter-section {
   text-align: center;
+  /* Центрування вмісту секції */
+  margin: 20px 0;
+  /* Відступ зверху і знизу */
 }
+
+.filter-title {
+  color: #333;
+  /* Колір тексту заголовка */
+  font-size: 24px;
+  /* Розмір шрифту заголовка */
+  margin-bottom: 20px;
+  /* Відступ між заголовком і кнопками */
+}
+
+.filter-button {
+  background-color: #4CAF50;
+  /* Зелений колір кнопки */
+  color: white;
+  /* Колір тексту */
+  padding: 10px 20px;
+  /* Внутрішні відступи кнопки */
+  border: none;
+  /* Відсутність рамки */
+  cursor: pointer;
+  /* Курсор у вигляді руки при наведенні */
+  margin: 0 10px;
+  /* Відступи між кнопками */
+  border-radius: 5px;
+  /* Закруглені кути */
+  transition: background-color 0.3s;
+  /* Плавна зміна кольору при наведенні */
+}
+
+.filter-button:hover {
+  background-color: #45a049;
+  /* Колір кнопки при наведенні */
+}
+/*  */
 
 @media screen and (max-width: 768px) {
   .image-link {

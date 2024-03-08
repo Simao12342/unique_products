@@ -1,7 +1,7 @@
 const CART_PRODUCTS_LABEL = "cart-products";
 const getProducts = async () => {
   try {
-    const response = await fetch("https://raw.githubusercontent.com/Simao12342/inet-magaz-dynamicproducts/main/Product.txt");
+    const response = await fetch("https://raw.githubusercontent.com/Simao12342/unique_products/main/Product.txt");
     if (!response.ok) {
       throw new Error(`HTTP помилка! статус: ${response.status}`);
     }
@@ -27,6 +27,7 @@ const renderProducts = async () => {
     const productBuyBtn = document.createElement("button");
     // setting values for elements
     productWrapper.classList.add("product-item");
+    productWrapper.setAttribute('data-category', item.category); /**додавання кожному елементу атрибуту із значень "category" */
     productPriceSection.classList.add("product-item-price");
     productImg.src = item.image;
     productTitle.innerText = item.title;

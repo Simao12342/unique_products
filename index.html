@@ -77,26 +77,21 @@
         <!-- Обгортка для слайдів -->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img
-              src="IMG/баннер 1.webp"
-              alt="Slide 1"
-              class="d-block w-80"
-            />
+            <img src="IMG/баннер 1.webp" alt="Slide 1" class="d-block w-80" />
           </div>
           <div class="carousel-item">
-            <img
-              src="IMG/баннер 2.webp"
-              alt="Slide 2"
-              class="d-block w-80"
-            />
+            <img src="IMG/баннер 2.webp" alt="Slide 2" class="d-block w-80" />
           </div>
           <div class="carousel-item">
             <img src="IMG/баннер 4.jpg" alt="Slide 3" class="d-block w-80" />
           </div>
           <div class="carousel-item">
-            <img src="IMG/unique-products-high-resolution-logo.png" alt="Slide 4" class="d-block w-80" />
+            <img
+              src="IMG/unique-products-high-resolution-logo.png"
+              alt="Slide 4"
+              class="d-block w-80"
+            />
           </div>
-
         </div>
 
         <!-- Кнопки управління -->
@@ -121,55 +116,19 @@
       </div>
     </div>
     <!-- кінець слайдера з фото -->
-    <div class="image-link-container">
-      <a href="#" class="image-link">
-        <img
-          src="https://indigo-grup.com.ua/image/cache/catalog/sq/large-default-v21e1w85i1y0odtib478s0m.jpg"
-          alt="Опис зображення 1"
-        />
-        <div class="overlay">
-          <div class="text">Інструменти</div>
-        </div>
-      </a>
-      <a href="#" class="image-link">
-        <img
-          src="https://moto-lux.com.ua/content/uploads/images/depositphotos_125896446-stock-illustration-set-of-home-kitchen-and%281%29.jpg"
-          alt="Опис зображення 2"
-        />
-        <div class="overlay">
-          <div class="text">Техніка</div>
-        </div>
-      </a>
-      <a href="#" class="image-link">
-        <img
-          src="https://oppb.com.ua/wp-content/uploads/2016/09/1464588615_zasobi.jpeg"
-          alt="Опис зображення 2"
-        />
-        <div class="overlay">
-          <div class="text">Засоби захисту</div>
-        </div>
-      </a>
-      <a href="#" class="image-link">
-        <img
-          src="https://images.prom.ua/3659475894_w640_h640_spetsodezhda-rabochaya-odezhda.jpg"
-          alt="Опис зображення 2"
-        />
-        <div class="overlay">
-          <div class="text">Робочий одяг</div>
-        </div>
-      </a>
-      <a href="#" class="image-link">
-        <img
-          src="https://images.prom.ua/3003061198_w700_h500_chereviki-robochi-talan.jpg"
-          alt="Опис зображення 2"
-        />
-        <div class="overlay">
-          <div class="text">Робоче взуття</div>
-        </div>
-      </a>
 
-      <!-- Додайте більше блоків за потреби -->
+    <div class="filter-section">
+      <h2 class="filter-title">Категорії товарів</h2>
+      <!-- Кнопки фільтрації тут  -->
+      <button class="filter-button" id="filterMSO">
+        Машини, станки і обладнання
+      </button>
+      <button class="filter-button" id="filterAvtogroup">Автотовари</button>
+      <button class="filter-button" id="filterSafety">Засоби захисту</button>
+      <button class="filter-button" id="filterAll">Всі товари</button>
+      <!-- Додаткові кнопки фільтрації можуть бути додані тут -->
     </div>
+
     <ul class="products-container"></ul>
     <div class="cart">
       <h2>Кошик</h2>
@@ -305,7 +264,7 @@
         </div>
       </div>
     </footer>
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="./script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -314,6 +273,28 @@
     <script>
       $(".carousel").carousel({
         interval: 5000, // змініть на потрібну кількість мілісекунд (2000 мс = 2 секунди)
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#filterMSO").click(function () {
+          $(".product-item").hide(); // Спочатку ховаємо всі продукти
+          $('.product-item[data-category="MSO"]').show(); // Показуємо лише ті, що мають категорію "tools"
+        });
+        $("#filterAvtogroup").click(function () {
+          $(".product-item").hide(); // Спочатку ховаємо всі продукти
+          $('.product-item[data-category="Avtogroup"]').show(); // Показуємо лише ті, що мають категорію "tools"
+        });
+
+        $("#filterSafety").click(function () {
+          $(".product-item").hide(); // Спочатку ховаємо всі продукти
+          $('.product-item[data-category="safety"]').show(); // Показуємо лише ті, що мають категорію "safety"
+        });
+
+        $("#filterAll").click(function () {
+          $(".product-item").show(); // Показуємо всі продукти
+        });
       });
     </script>
   </body>
