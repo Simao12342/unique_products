@@ -97,4 +97,100 @@ h5 {
     color: white;
 
 }
+/* Стилі для контейнера */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
 
+/* Стилізація форми */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Додає padding всередину блоку, замість збільшення його розмірів */
+}
+
+textarea {
+    resize: vertical; /* Дозволяє змінювати розмір тільки по вертикалі */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Стилі для відгуку */
+#feedbacks {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .feedback {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .nameList, .emailList, .messageList {
+    margin-bottom: 5px;
+  }
+
+  .nameList p, .emailList p, .messageList p {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .nameList p {
+    font-weight: bold;
+    color: #333;
+    font-size: 20px;
+  }
+
+  .emailList p {
+    font-style: italic;
+    color: #666;
+  }
+
+  .messageList p {
+    color: #444;
+  }
+  .messageList {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    border: 2px solid gray;
+    border-radius: 5px;
+  }
