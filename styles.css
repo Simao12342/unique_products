@@ -213,7 +213,7 @@ h5 {
   display: flex; /* використовується flexbox для центрування */
   justify-content: center; /* центрування по горизонталі */
   align-items: center; /* центрування по вертикалі */
-  height: 400px; /* висота контейнера - 100% від висоти вікна перегляду */
+  height: 50vh; /* висота контейнера - 100% від висоти вікна перегляду */
 }
 
 /* Стилі для самого слайдера */
@@ -228,7 +228,7 @@ h5 {
 .carousel-inner img {
 
   width: 100%; /* ширина зображення - 100% від ширини слайдера */
-  height: 400px; /* висота зображення - 100% від висоти слайдера */
+  height: 50vh; /* висота зображення - 100% від висоти слайдера */
   overflow: hidden;
   object-fit: cover; /* забезпечує, щоб зображення покривали слайд, не втрачаючи пропорції */
 }
@@ -311,38 +311,95 @@ footer {
   margin: 20px 0;
   /* Відступ зверху і знизу */
 }
-
+.filter-section-buttons {
+  display: flex;
+  justify-content: center;
+}
 .filter-title {
   color: #333;
   /* Колір тексту заголовка */
-  font-size: 24px;
+  font-size: 35px;
   /* Розмір шрифту заголовка */
   margin-bottom: 20px;
   /* Відступ між заголовком і кнопками */
 }
-
+.filter-btn {
+  border: none;
+}
 .filter-button {
-  background-color: #4CAF50;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #4caf4fb7;
   /* Зелений колір кнопки */
   color: white;
   /* Колір тексту */
-  padding: 10px 20px;
+  padding: 10px 12px;
   /* Внутрішні відступи кнопки */
   border: none;
   /* Відсутність рамки */
   cursor: pointer;
   /* Курсор у вигляді руки при наведенні */
-  margin: 0 10px;
+  margin: 0px;
   /* Відступи між кнопками */
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   /* Закруглені кути */
   transition: background-color 0.3s;
   /* Плавна зміна кольору при наведенні */
 }
+.filter-button {
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
+}
 .filter-button:hover {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
   background-color: #45a049;
   /* Колір кнопки при наведенні */
+}
+.container-filter-button {
+
+  border: none !important;
+  margin-left: 15px;
+  position: relative;
+  width: 15%;
+  height: 200px;
+}
+.container-filter-button img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container-filter-button {
+    width: 45%; /* Larger on tablets for better visibility */
+  }
+
+  .filter-title {
+    font-size: 28px; /* Slightly smaller font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-section-buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+
+  .container-filter-button {
+    margin: auto;
+    width: 90%; /* Make buttons span almost full width */
+    margin-bottom: 20px; /* Add some space between the buttons */
+  }
+
+  .filter-title {
+    font-size: 24px; /* Even smaller font size for small screens */
+  }
 }
 /*  */
 

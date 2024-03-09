@@ -72,18 +72,20 @@
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
           <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <li data-target="#myCarousel" data-slide-to="5"></li>
         </ol>
 
         <!-- Обгортка для слайдів -->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="IMG/баннер 1.webp" alt="Slide 1" class="d-block w-80" />
+            <img src="IMG/баннер 02.webp" alt="Slide 1" class="d-block w-80" />
           </div>
           <div class="carousel-item">
-            <img src="IMG/баннер 2.webp" alt="Slide 2" class="d-block w-80" />
+            <img src="IMG/баннер 01.jpeg" alt="Slide 2" class="d-block w-80" />
           </div>
           <div class="carousel-item">
-            <img src="IMG/баннер 4.jpg" alt="Slide 3" class="d-block w-80" />
+            <img src="IMG/баннер 03.jpg" alt="Slide 3" class="d-block w-80" />
           </div>
           <div class="carousel-item">
             <img
@@ -92,6 +94,21 @@
               class="d-block w-80"
             />
           </div>
+          <div class="carousel-item">
+            <img
+              src="IMG/баннер 04.webp"
+              alt="Slide 5"
+              class="d-block w-80"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="IMG/баннер 05.webp"
+              alt="Slide 6"
+              class="d-block w-80"
+            />
+          </div>
+
         </div>
 
         <!-- Кнопки управління -->
@@ -120,12 +137,36 @@
     <div class="filter-section">
       <h2 class="filter-title">Категорії товарів</h2>
       <!-- Кнопки фільтрації тут  -->
-      <button class="filter-button" id="filterMSO">
-        Машини, станки і обладнання
-      </button>
-      <button class="filter-button" id="filterAvtogroup">Автотовари</button>
-      <button class="filter-button" id="filterSafety">Засоби захисту</button>
-      <button class="filter-button" id="filterAll">Всі товари</button>
+<div class="filter-section-buttons">
+  <div class="container-filter-button">
+    <img src="IMG/AllGoods.jpg" alt="filterAvtogroup">
+    <a class="filter-button" id="filterAll">Всі товари</a>
+  </div>
+
+      <div class="container-filter-button">
+        <img src="IMG/avtogroup.jpg" alt="filterAvtogroup">
+        <a class="filter-button" id="filterAvtogroup">Автотовари</a>
+      </div>
+      <div class="container-filter-button">
+        <img src="IMG/clothes.jpg" alt="filterAvtogroup">
+        <a class="filter-button" id="filterClothes">Одяг</a>
+      </div>
+      <div class="container-filter-button">
+        <img src="IMG/tools.jpg" alt="filterAvtogroup">
+        <a class="filter-button" id="filterTools">Інструменти</a>
+      </div>
+      <div class="container-filter-button">
+        <img src="IMG/safety.jpg" alt="filterAvtogroup">
+        <a class="filter-button" id="filterSafety">Захист</a>
+      </div>
+      <div class="container-filter-button">
+        <img src="IMG/machinery.avif" alt="filterAvtogroup">
+        <a class="filter-button" id="filterMSO">
+          Станки
+        </a>
+      </div>
+    </div>
+
       <!-- Додаткові кнопки фільтрації можуть бути додані тут -->
     </div>
 
@@ -275,6 +316,7 @@
         interval: 5000, // змініть на потрібну кількість мілісекунд (2000 мс = 2 секунди)
       });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
       $(document).ready(function () {
@@ -284,7 +326,15 @@
         });
         $("#filterAvtogroup").click(function () {
           $(".product-item").hide(); // Спочатку ховаємо всі продукти
-          $('.product-item[data-category="Avtogroup"]').show(); // Показуємо лише ті, що мають категорію "tools"
+          $('.product-item[data-category="avtogroup"]').show(); // Показуємо лише ті, що мають категорію "tools"
+        });
+        $("#filterTools").click(function () {
+          $(".product-item").hide(); // Спочатку ховаємо всі продукти
+          $('.product-item[data-category="tools"]').show(); // Показуємо лише ті, що мають категорію "safety"
+        });
+        $("#filterClothes").click(function () {
+          $(".product-item").hide(); // Спочатку ховаємо всі продукти
+          $('.product-item[data-category="clothes"]').show(); // Показуємо лише ті, що мають категорію "safety"
         });
 
         $("#filterSafety").click(function () {
@@ -296,6 +346,8 @@
           $(".product-item").show(); // Показуємо всі продукти
         });
       });
-    </script>
+
+      </script>
+
   </body>
 </html>

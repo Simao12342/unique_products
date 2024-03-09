@@ -196,3 +196,7 @@ const setCurrentCartItems = (products) => {
 };
 
 renderProducts();
+document.getElementsById('filterAll').addEventListener('click', function() {
+  this.style.border = 'none'; // Видаляємо рамку
+  this.style.outline = 'none'; // Видаляємо контур, який може з'явитися після кліку
+});
